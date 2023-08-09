@@ -4,7 +4,8 @@ This is a simulation and analysis package for TSEN models described in Knapp et 
 The TSEN model describes a closed autocatalytic enzyme reaction network composed of chained, fully temperature-sensitive Michaelis-Menten reactions (https://en.wikipedia.org/wiki/Michaelis%E2%80%93Menten_kinetics), which imports metabolites through the system's cellular envelope to produce a final growth reaction. 
 
 ## TSEN model scheme
-The TSEN scheme is composed of reactions encompassing (1) Import, (2) Production, and (3) Growth. The production rate, $k_{prod}$, for each reaction is described by $k_{prod} = \dfrac{k_{cat}(T) ec}{K_M(T)+c}$
+The TSEN scheme is composed of reactions encompassing (1) Import, (2) Production, and (3) Growth. The production rate, $k_{prod}$, for each reaction is described by $k_{prod} = \dfrac{k_{cat}(T) ec}{K_M(T)+c}$, where the catalytic rate ($k_{cat}) and Michaelis-Menten constant ($K_M$) are both temperature sensitive. The substrate concentration, $c$, is consumed by an enzyme at concentration $e$. 
 
+## File descriptions
 ### 1. Generalized linear TSEN model (TSEN_Linear_Generalized)
 This TSEN model is a linear reaction network (i.e., without branching) generalized to incorporate any number of intermediate production reactions, but with a single import reaction and growth reaction.
