@@ -10,6 +10,17 @@ In chained Michealis-Menten reactions, the total production rate of an intermedi
 
 <p align="center">$\dot{c_i} = k_{prod}(c_{i-1}) - k_{prod}(c_i)$</p>
 
+While this rate of production of $c_i$ is true under fixed volume, the TSEN system is contained within a growing envelope of size $V$, which expands at a growth rate $g = \dot{V}/V$. To account for this dilution
+
+<p align="center">$\dot{c_i} = k_{prod}(c_{i-1}) - k_{prod}(c_i) - c_i g$</p>
+
+The final growth rate reaction is defined as a Michaelis-Menten reaction, but with a constant growth efficiency factor ($\gamma_o$) that captures the final reaction's efficiency at converting the final reactant ($c_N$, network length $N$) to mature cell envelope material.
+
+<p align="center">$g = \gamma_o\dfrac{k_N e_Nc_N}{K_N+c_N}$</p>
+
 ## File descriptions
 ### 1. Generalized linear TSEN model (TSEN_Linear_Generalized)
 This TSEN model is a linear reaction network (i.e., without branching) generalized to incorporate any number of intermediate production reactions, but with a single import reaction and growth reaction.
+
+### 2. Production-less linear TSEN model (TSEN_ProductionLess)
+This model is similar to the generalized TSEN model (#1), but removes the intermediate production reaction (i.e., is composed only of import and growth reactions). This model is useful as an analytically tractable system, thus allowing deeper physical insight into the system's dynamics.
